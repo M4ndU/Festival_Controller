@@ -8,16 +8,24 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         try:
             while True:
                 print('[-] Waiting for response...')
-                print((s.recv(1024)).decode('utf-8'))
+                data = (s.recv(1024)).decode('utf-8')
+                print(data)
                 OkMsg = "OK!"
                 s.send(OkMsg.encode('utf-8'))
+                scoreboard(data)    
         except:
             s.close()
             print("[!] disconnected")
 
+def scoreboard(score):
+    f = open("scoreboard.txt", "a")
+    f.write("\n"+str(score))
+    f.close
+
+
 def main():
-    host = "127.0.0.1"
-    port = 33344
+    host = ""
+    port = 8080
 
     server = socketserver.TCPServer((host, port),MyTCPHandler)
 
