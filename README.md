@@ -10,7 +10,8 @@ window.py
 
 socket_clinet.py
 -------------
-socket_client.py임. 파이명 오타.
+socket_client.py임. 파일명 오타.
+
 컨트롤러에 들어가는 점수 전송용 클라이언트쪽 코드.
 
 
@@ -26,6 +27,7 @@ scoreboard.txt에 기록된 내용들을 sort하여 각 게임별로 5순위까�
 
 
 #Inhun high scool festival; Inhun award ended on Saturday, August 25, 2018.
+
 #The project is over.
 
 #Final edit : sep/13/2018
